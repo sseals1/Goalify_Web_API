@@ -29,14 +29,14 @@ namespace Goalify.Repositories
                 conn.Open();
                 using (var cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT userId, categoryId, priorityId, termId, milestoneId, goalDescription, goalObjectives, notes, goalDate,
-                        FROM Goals;";
+                    cmd.CommandText = @"SELECT userId, categoryId, priorityId, termId, milestoneId, goalDescription, goalObjectives, notes, goalDate
+                        FROM Goals";
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
                         var varieties = new List<Goals>();
                         while (reader.Read())
                         {
-                            var Goals = new Goals()
+                            var goals = new Goals()
                             {
                                 Id = reader.GetInt32(reader.GetOrdinal("Id")),
                                 //Name = reader.GetString(reader.GetOrdinal("Name")),
