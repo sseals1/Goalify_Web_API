@@ -86,8 +86,8 @@ namespace Goalify.Repositories
             }
         }
 
-        //    public void Add(Goals goal)
-        //    {
+            public void Add(Users user)
+            {
         //        using (var conn = Connection)
         //        {
         //            conn.Open();
@@ -118,7 +118,7 @@ namespace Goalify.Repositories
         //                goal.Id = (int)cmd.ExecuteScalar();
         //            }
         //        }
-        //    }
+            }
 
         //    public void Update(Goals goal)
         //    {
@@ -161,8 +161,8 @@ namespace Goalify.Repositories
         //        }
         //    }
 
-        //    public void Delete(int id)
-        //    {
+            public void Delete(int id)
+          {
         //        using (var conn = Connection)
         //        {
         //            conn.Open();
@@ -174,7 +174,7 @@ namespace Goalify.Repositories
         //                cmd.ExecuteNonQuery();
         //            }
         //        }
-        //    }
+          }
 
     }
 }
