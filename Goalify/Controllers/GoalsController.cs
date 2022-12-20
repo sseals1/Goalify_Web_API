@@ -22,7 +22,7 @@ namespace Goalify.Controllers
             return Ok(_goalsRepository.GetAll());
         }
 
-        // https://localhost:5001/api/beanvariety/5
+        // https://localhost:5001/api/goals/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -34,7 +34,7 @@ namespace Goalify.Controllers
             return Ok(variety);
         }
 
-        // https://localhost:5001/api/beanvariety/
+        // https://localhost:5001/api/goals/
         [HttpPost]
         public IActionResult Post(Goals goal)
         {
@@ -42,7 +42,7 @@ namespace Goalify.Controllers
             return CreatedAtAction("Get", new { id = goal.Id }, goal);
         }
 
-        // https://localhost:5001/api/beanvariety/5
+        // https://localhost:5001/api/goals/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, Goals goal)
         {
@@ -55,7 +55,7 @@ namespace Goalify.Controllers
             return NoContent();
         }
 
-        // https://localhost:5001/api/beanvariety/5
+        // https://localhost:5001/api/goals/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
