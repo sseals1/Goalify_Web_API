@@ -28,6 +28,7 @@ namespace Goalify
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IGoalsRepository, GoalsRepository>();
+            services.AddTransient<IUsersRepository, UsersRepository>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
