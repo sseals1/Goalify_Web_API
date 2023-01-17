@@ -8,11 +8,11 @@ using Goalify.Utils;
 
 namespace Goalify.Repositories
 {
-    public class TermRepository : ITermRepository
+    public class TermsRepository : ITermsRepository
     {
 
         private readonly string _connectionString;
-        public TermRepository(IConfiguration configuration)
+        public TermsRepository(IConfiguration configuration)
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }

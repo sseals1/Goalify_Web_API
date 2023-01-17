@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Goalify.Repositories
 {
-    public interface ITermRepository
+    public interface ITermsRepository
     {
         Terms Get(Terms term);
         List<Terms> GetAll();
