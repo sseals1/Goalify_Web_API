@@ -29,6 +29,7 @@ namespace Goalify
         {
             services.AddTransient<IGoalsRepository, GoalsRepository>();
             services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddTransient<ITermsRepository, TermsRepository>();    
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
