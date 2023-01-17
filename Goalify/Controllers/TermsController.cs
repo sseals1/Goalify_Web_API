@@ -1,7 +1,7 @@
-﻿using Goalify.Repositories;
+﻿using Goalify.Models;
+using Goalify.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace Goalify.Controllers
 {
