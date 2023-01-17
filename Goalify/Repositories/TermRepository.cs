@@ -8,7 +8,7 @@ using Goalify.Utils;
 
 namespace Goalify.Repositories
 {
-    public class TermRepository
+    public class TermRepository : ITermRepository
     {
 
         private readonly string _connectionString;
@@ -39,7 +39,7 @@ namespace Goalify.Repositories
                             terms.Add(new Terms()
                             {
                                 Id = reader.GetInt32(reader.GetOrdinal("Id")),
-                                Term = reader.GetString(reader.GetOrdinal("Term")),                                
+                                Term = reader.GetString(reader.GetOrdinal("Term")),
                             });
 
                         }
@@ -71,7 +71,7 @@ namespace Goalify.Repositories
                             term = new Terms()
                             {
                                 Id = DbUtils.GetInt(reader, "Id"),
-                                Term = DbUtils.GetString(reader, "Term"),                                
+                                Term = DbUtils.GetString(reader, "Term"),
 
                             };
 
